@@ -30,7 +30,9 @@ NSString *const EFLoginInvalidNotification = @"EFLoginInvalidNotification";
 //@property (nonatomic, strong)ErrorViewModel * viewModel;
 
 @end
+
 @implementation EFRequest
+
 /**
  *  创建request的GET请求
  *
@@ -39,6 +41,7 @@ NSString *const EFLoginInvalidNotification = @"EFLoginInvalidNotification";
 +(id)requestWithGET{
     return [[self alloc] initGetRequest];
 }
+
 /**
  *  创建request的POST请求
  *
@@ -47,6 +50,17 @@ NSString *const EFLoginInvalidNotification = @"EFLoginInvalidNotification";
 + (id)requestWithPOST{
     return [[self alloc]initPostRequest];
 }
+
+/**
+ *  创建request的PUT请求
+ *
+ *  @return request对象
+ */
++ (id)requestWithPUT{
+    return [[self alloc]initPUTRequest];
+}
+
+
 /**
  *  判断网络是否可用
  *
@@ -113,12 +127,24 @@ NSString *const EFLoginInvalidNotification = @"EFLoginInvalidNotification";
     return self;
 }
 
+- (id)initPUTRequest{
+    if(self = [self init]){
+        self.tag = -1;
+        self.method = @"PUT";
+        if ([self isNetworkReachable] ==NO){
+            [UIUtil alert:@"请检查你的网络"];
+        }
+    }
+    return self;
+}
 
 - (void)loadRequest{
+    self.jsonString = [[NSString alloc] init];
     self.params = [NSDictionary dictionary];
     self.httpHeaderFields = [NSDictionary dictionary];
     self.requestFiles_Upload = [NSDictionary dictionary];
 }
+
 
 - (void)startCallBack:(RequestCallBackBlock)callBack{
     
@@ -283,103 +309,17 @@ NSString *const EFLoginInvalidNotification = @"EFLoginInvalidNotification";
     }
 }
 
-/*
-- (void)startWithJsonCallBack:(RequestCallBackBlock)callBack {
-    
-    NSString *jsonString = self.params[@"body"];
-    
-    //请求地址
-    NSString * url;
-    if (self.baseURL) {
-        url = [NSString stringWithFormat:@"%@%@",self.baseURL,self.urlPath];
-    }else{
-        url = [NSString stringWithFormat:@"%@%@",self.serverAddressURL,self.urlPath];
-    }
-    
-    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
-    
-    AFSecurityPolicy *securityPolicy = [AFSecurityPolicy defaultPolicy];
-    securityPolicy.allowInvalidCertificates = YES;
-    
-    NSMutableURLRequest *req = [[AFJSONRequestSerializer serializer] requestWithMethod:@"POST" URLString:url parameters:nil error:nil];
-    req.timeoutInterval= [[[NSUserDefaults standardUserDefaults] valueForKey:@"timeoutInterval"] longValue];
-    [req setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    //[req setValue:@"1.0" forHTTPHeaderField:@"version"];
-    [req setHTTPBody:[jsonString dataUsingEncoding:NSUTF8StringEncoding]];
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-    
-    //**HTTPS请求专属**
-    manager.securityPolicy = securityPolicy;
-    
-    //请求头
-    if (self.httpHeaderFields.count>0) {
-        for (NSString * key in self.httpHeaderFields.allKeys) {
-            [req setValue:[self.httpHeaderFields objectForKey:key] forHTTPHeaderField:key];
-        }
-    }
-    
-
-#ifdef DEBUG
-    NSLog(@"\n----RequestURL : %@\n/----Parameters :\n%@\n  -----------",url,self.params);
-    NSLog(@"\n----self.httpHeaderFields : %@",self.httpHeaderFields);
-    NSLog(@"\n----self.requestFiles_Upload : %@",self.requestFiles_Upload);
-#endif
-    
-    [[manager dataTaskWithRequest:req completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
-        
-        if (!error) {
-            NSLog(@"Reply JSON: %@", responseObject);
-            
-            if ([responseObject isKindOfClass:[NSDictionary class]]) {
-                
-                [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-                NetworkModel *nm = [[NetworkModel alloc] initWithJsonData:responseObject];
-                nm.tag = self.tag;
-                //登录失效：被挤下线时发出通知
-                if (nm.status == NetworkModelStatusTypeUserNoLogin) {
-                    [[NSNotificationCenter defaultCenter] postNotificationName:EFLoginInvalidNotification object:nil];
-                }
-                //只有状态码是 NetworkModelStatusTypeSuccess 表示数据请求成功
-                if (nm.status == NetworkModelStatusTypeSuccess) {
-                    callBack(CallBackStatusSuccess,nm);
-                }
-                else{//其他任何情况都表示请求错误，可能是输入有误等，需要自行处理
-                    callBack(CallBackStatusRequestError,nm);
-                }
-                
-            }
-            
-
-            
-        } else {
-            NSLog(@"Error: %@, %@, %@", error, response, responseObject);
-            
-            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-            NetworkModel *nm = [[NetworkModel alloc] init];
-            nm.status = NetworkModelStatusTypeServerUnusualError;
-            nm.tag = self.tag;
-            nm.message = @"服务器异常错误!";
-            nm.content = error.userInfo;
-            if([error.userInfo.allKeys containsObject:@"com.alamofire.serialization.response.error.data"]){
-                NSData *data = [error.userInfo objectForKey:@"com.alamofire.serialization.response.error.data"];
-                NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-                NSLog(@"----------ERROR MESSAGE : %@",string);
-            }
-            NSLog(@"%@",nm.content);
-            NSLog(@"%@",nm.message);
-            if (callBack && !_canceled) {
-                callBack(CallBackStatusRequestFailure,nm);
-            }
-
-        }
-    }] resume];
-
-}
- */
 
 - (void)startWithJsonCallBack:(RequestCallBackBlock)callBack {
     
-    NSString *jsonString = self.params[@"body"];
+    //NSString *jsonString = self.params[@"body"];
+    
+    NSString *jsonString = self.jsonString;
+    NSDictionary *dic = self.params;
+    if ([UIUtil isEmptyStr:jsonString]) {
+        NSLog(@"Error Json参数为空.....................");
+        return;
+    }
     
     //请求地址
     NSString * url;
@@ -428,9 +368,10 @@ NSString *const EFLoginInvalidNotification = @"EFLoginInvalidNotification";
             
             [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
             
-            NetworkModel *nm = [NetworkModel yy_modelWithJSON:responseObject];
-            
+#warning TODO 我们公司写的这个json处理的方法有严重bug，暂未解决
             //NetworkModel *nm = [[NetworkModel alloc] initWithJsonData:responseObject];
+            NetworkModel *nm = [NetworkModel yy_modelWithDictionary:responseObject];
+            
             nm.tag = self.tag;
             //登录失效：被挤下线时发出通知
             if (nm.status == NetworkModelStatusTypeUserNoLogin) {

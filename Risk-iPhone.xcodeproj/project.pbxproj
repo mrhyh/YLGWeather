@@ -2604,7 +2604,6 @@
 		EBEE74601DEC318C00FE93FC /* YLG_EF */ = {
 			isa = PBXGroup;
 			children = (
-				EBEE74611DEC318C00FE93FC /* EasyFrame_iOS2.0 */,
 				EBEE74621DEC318C00FE93FC /* EasyFrame_iOS2.0.xcodeproj */,
 				EBEE74651DEC318C00FE93FC /* EasyFrameBase */,
 				EBEE750E1DEC318C00FE93FC /* EasyFrameComponent */,
@@ -2612,13 +2611,6 @@
 				EBEE75FA1DEC318D00FE93FC /* README.md */,
 			);
 			path = YLG_EF;
-			sourceTree = "<group>";
-		};
-		EBEE74611DEC318C00FE93FC /* EasyFrame_iOS2.0 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = EasyFrame_iOS2.0;
 			sourceTree = "<group>";
 		};
 		EBEE74631DEC318C00FE93FC /* Products */ = {

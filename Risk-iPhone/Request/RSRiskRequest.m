@@ -414,11 +414,7 @@
 
 - (void)startWithJsonCallBack:(RequestCallBackBlock)callBack{
     self.urlPath = @"/rest/followUp/saveFollowRecord";
-    
-    self.params = @{
-                    @"body":self.json
-                    };
-    
+    self.jsonString = self.json;
     self.httpHeaderFields  = [RSToolRequest returnTttpHeaderFieldsWithVersion:@"1.0"];
     [super startWithJsonCallBack:callBack];
 }
@@ -455,10 +451,7 @@
 - (void)startWithJsonCallBack:(RequestCallBackBlock)callBack{
     self.urlPath = @"/rest/followUp/updateFollowRecord";
     
-    self.params = @{
-                    @"body":self.json
-                    };
-    
+    self.jsonString = self.json;
     self.httpHeaderFields  = [RSToolRequest returnTttpHeaderFieldsWithVersion:@"1.0"];
     [super startWithJsonCallBack:callBack];
 }

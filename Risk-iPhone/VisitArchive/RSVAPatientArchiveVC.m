@@ -132,7 +132,7 @@ static NSString * const RSVAVisitRecordCell_One_ID = @"RSVAVisitRecordCell_One_I
     [SVProgressHUD dismiss];
     
     //如果未保存，则清空数据
-    _model = [[RSVisitArchiveModel alloc] init];
+//    _model = [[RSVisitArchiveModel alloc] init];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

@@ -35,6 +35,10 @@ typedef void (^RequestCallBackBlock)(CallBackStatus callBackStatus,NetworkModel 
  */
 @property(nonatomic, strong)NSDictionary *httpHeaderFields;
 /**
+ *  JsonString(需要提交Json给后台时，给这个参数赋值即可)
+ */
+@property(nonatomic, strong)NSString  *jsonString;
+/**
  *  使用字典参数
  */
 @property(nonatomic, strong)NSDictionary *params;
@@ -63,6 +67,7 @@ typedef void (^RequestCallBackBlock)(CallBackStatus callBackStatus,NetworkModel 
  *
  *  @return request对象
  */
+
 +(id)requestWithGET;
 /**
  *  创建request的POST请求
@@ -70,6 +75,14 @@ typedef void (^RequestCallBackBlock)(CallBackStatus callBackStatus,NetworkModel 
  *  @return request对象
  */
 + (id)requestWithPOST;
+
+/**
+ *  创建request的PUT请求
+ *
+ *  @return request对象
+ */
++ (id)requestWithPUT;
+
 
 /**
  *  通用的网络请求

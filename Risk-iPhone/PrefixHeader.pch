@@ -1,0 +1,49 @@
+//
+//  RiskPrefixHeader.pch
+//  Risk
+//
+//  Created by ylgwhyh on 16/6/29.
+//  Copyright © 2016年 com.risk.kingyon. All rights reserved.
+//
+
+#ifndef RiskPrefixHeader_pch
+#define RiskPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* RiskPrefixHeader_pch */
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+//#import <YYModel/YYModel.h>
+#import "RiskHeader.h"
+#import "EFAppHeader.h"
+#import "UserModel.h"
+#import "KYTableView.h"
+//#import "BlockAlert.h"
+//#import "SVProgressHUD.h"
+//#import "UIImageView+WebCache.h"
+//#import "UIView+SDAutoLayout.h"
+//#import "HYDImageCategory.h"
+//#import "HYDActivityIndicatorView.h"
+#import  "UITableView+SDAutoTableViewCellHeight.h"
+//#import "UIView+JSMAdd.h"
+#import <objc/runtime.h>
+//#import "IQUIView+IQKeyboardToolbar.h"
+//#import "IQKeyboardManager.h"
+//#import "XYAttributedString.h"
+#import "KYMHImageView.h"
+#import "KYMHButton.h"
+#import "KYMHLabel.h"
+#import "EFHeader.h"
+#import "RS_UserModel.h"
+#import "RSMethod.h"
+#import "YLG_Header.h"
+#import "MBProgressHUD.h"
+#import "SVProgressHUD.h"
+#import "UIButton+frame.h"
+#import "DXPopover.h"  //弹出视图
+
+#endif

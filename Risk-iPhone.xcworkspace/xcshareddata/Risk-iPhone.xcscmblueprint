@@ -1,0 +1,35 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "04759db4-9af8-43ff-a320-3e1e11e12db7++2614",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "04759db4-9af8-43ff-a320-3e1e11e12db7++5586" : {
+
+    },
+    "04759db4-9af8-43ff-a320-3e1e11e12db7++2614" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "04759db4-9af8-43ff-a320-3e1e11e12db7++5586" : 9223372036854775807,
+    "04759db4-9af8-43ff-a320-3e1e11e12db7++2614" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "2D82D4AE-D5B4-4BE6-9A96-FAA9B213D27E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "04759db4-9af8-43ff-a320-3e1e11e12db7++5586" : "EF_branches\/",
+    "04759db4-9af8-43ff-a320-3e1e11e12db7++2614" : "EF_branches\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Risk-iPhone",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "trunk\/Risk-iPhone\/Risk-iPhone.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/192.168.0.122\/svn\/kingyonsvn",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "04759db4-9af8-43ff-a320-3e1e11e12db7++2614"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/192.168.0.122\/svn\/kingyonsvn",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "04759db4-9af8-43ff-a320-3e1e11e12db7++5586"
+    }
+  ]
+}

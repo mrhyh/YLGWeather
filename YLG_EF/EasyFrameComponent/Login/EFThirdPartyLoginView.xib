@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="6zd-25-PZA" customClass="EFThirdPartyLoginView">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="135"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="或使用以下方式登录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGG-OL-33A">
+                    <rect key="frame" x="140" y="0.0" width="135" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="135" id="7SV-gm-N2p"/>
+                        <constraint firstAttribute="height" constant="20" id="Gs5-14-Znq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Gs5-14-Znq"/>
+                        </mask>
+                    </variation>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eW3-Ay-JgH" userLabel="左边分割线">
+                    <rect key="frame" x="30" y="10" width="105" height="1"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="78Y-qz-qEp"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VPS-kb-1lf" userLabel="右边分割线">
+                    <rect key="frame" x="280" y="10" width="104" height="1"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="zPp-Bk-WcJ"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lWk-7c-8IK" userLabel="微博按钮" customClass="EFVerticalButton">
+                    <rect key="frame" x="172" y="35" width="70" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="laZ-0P-oDc"/>
+                        <constraint firstAttribute="height" constant="100" id="qOo-W1-l7G"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="微博">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="qOo-W1-l7G"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="weiboBtnClick" destination="6zd-25-PZA" eventType="touchUpInside" id="nIr-Uy-7qZ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLK-3B-nQd" userLabel="QQ按钮" customClass="EFVerticalButton">
+                    <rect key="frame" x="324" y="35" width="70" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="FGt-5Q-FEu"/>
+                        <constraint firstAttribute="height" constant="100" id="jxK-sR-o6h"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="QQ">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="QQBtnClick" destination="6zd-25-PZA" eventType="touchUpInside" id="b6y-AV-LHi"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9r-7h-HNg" userLabel="微信按钮" customClass="EFVerticalButton">
+                    <rect key="frame" x="20" y="35" width="70" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="43m-Gs-vyH"/>
+                        <constraint firstAttribute="width" constant="70" id="bw3-B4-B4K"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="微信">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="43m-Gs-vyH"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="weixinBtnClick" destination="6zd-25-PZA" eventType="touchUpInside" id="ZYy-Ft-d2h"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="lWk-7c-8IK" firstAttribute="top" secondItem="AGG-OL-33A" secondAttribute="bottom" constant="15" id="3YP-19-Ixp"/>
+                <constraint firstItem="eW3-Ay-JgH" firstAttribute="leading" secondItem="6zd-25-PZA" secondAttribute="leading" constant="30" id="6un-Iq-vMu"/>
+                <constraint firstAttribute="bottom" secondItem="lWk-7c-8IK" secondAttribute="bottom" id="8OO-Tv-AHp"/>
+                <constraint firstItem="N9r-7h-HNg" firstAttribute="bottom" secondItem="lWk-7c-8IK" secondAttribute="bottom" id="Doa-pq-9cO"/>
+                <constraint firstItem="VPS-kb-1lf" firstAttribute="centerY" secondItem="AGG-OL-33A" secondAttribute="centerY" id="KnH-UN-mLJ"/>
+                <constraint firstItem="lWk-7c-8IK" firstAttribute="centerX" secondItem="6zd-25-PZA" secondAttribute="centerX" id="MKm-3J-Teg"/>
+                <constraint firstItem="eW3-Ay-JgH" firstAttribute="top" secondItem="6zd-25-PZA" secondAttribute="top" constant="10" id="QlL-YO-0NT"/>
+                <constraint firstItem="N9r-7h-HNg" firstAttribute="leading" secondItem="6zd-25-PZA" secondAttribute="leading" constant="20" id="R2b-IN-0Uj"/>
+                <constraint firstAttribute="trailing" secondItem="fLK-3B-nQd" secondAttribute="trailing" constant="20" id="WK5-7W-mKS"/>
+                <constraint firstItem="VPS-kb-1lf" firstAttribute="leading" secondItem="AGG-OL-33A" secondAttribute="trailing" constant="5" id="XNs-ZQ-ZJ7"/>
+                <constraint firstItem="AGG-OL-33A" firstAttribute="leading" secondItem="eW3-Ay-JgH" secondAttribute="trailing" constant="5" id="Yr8-u0-kQO"/>
+                <constraint firstItem="fLK-3B-nQd" firstAttribute="bottom" secondItem="lWk-7c-8IK" secondAttribute="bottom" id="cYW-vt-tMf"/>
+                <constraint firstItem="eW3-Ay-JgH" firstAttribute="centerY" secondItem="AGG-OL-33A" secondAttribute="centerY" id="e5m-pl-toj"/>
+                <constraint firstItem="AGG-OL-33A" firstAttribute="centerX" secondItem="6zd-25-PZA" secondAttribute="centerX" id="j9t-kY-qny"/>
+                <constraint firstItem="AGG-OL-33A" firstAttribute="top" secondItem="6zd-25-PZA" secondAttribute="top" id="lu0-fB-XAy"/>
+                <constraint firstItem="N9r-7h-HNg" firstAttribute="top" secondItem="eW3-Ay-JgH" secondAttribute="bottom" constant="15" id="pSj-VU-pHo"/>
+                <constraint firstItem="lWk-7c-8IK" firstAttribute="top" secondItem="AGG-OL-33A" secondAttribute="bottom" constant="35" id="tgP-Eo-E7l"/>
+                <constraint firstItem="AGG-OL-33A" firstAttribute="top" secondItem="6zd-25-PZA" secondAttribute="top" id="xON-qg-BHq"/>
+                <constraint firstAttribute="bottom" secondItem="lWk-7c-8IK" secondAttribute="bottom" constant="18" id="xhZ-w4-6Z2"/>
+                <constraint firstItem="N9r-7h-HNg" firstAttribute="top" secondItem="lWk-7c-8IK" secondAttribute="top" id="xhd-bc-fc7"/>
+                <constraint firstAttribute="trailing" secondItem="VPS-kb-1lf" secondAttribute="trailing" constant="30" id="xq2-67-dAD"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="pSj-VU-pHo"/>
+                    <exclude reference="lu0-fB-XAy"/>
+                    <exclude reference="tgP-Eo-E7l"/>
+                    <exclude reference="xhZ-w4-6Z2"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="QQBtn" destination="fLK-3B-nQd" id="IS6-gt-YsE"/>
+                <outlet property="thirdPartyLabel" destination="AGG-OL-33A" id="wZ4-y0-fnc"/>
+                <outlet property="weiboBtn" destination="lWk-7c-8IK" id="1oK-GC-Gfn"/>
+                <outlet property="wexinBtn" destination="N9r-7h-HNg" id="Ejl-gu-16t"/>
+            </connections>
+            <point key="canvasLocation" x="110" y="414.5"/>
+        </view>
+    </objects>
+</document>

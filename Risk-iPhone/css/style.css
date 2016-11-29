@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    max-width: 1024px;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin:0 auto;
+}
+.sec{
+    display: block;
+    color: #303030;
+    text-decoration: none;
+    border-bottom: 1px solid #e8e8e8;
+}
+.title, .stitle,.dtitle {
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: bold;
+    color: #101010;
+}
+.stitle {
+    display:block;
+    line-height: 2.0;
+}
+.dtitle {
+    display:block;
+    line-height: 2.0;
+}
+.title {
+    background-image: url(../images/arrow.png);
+    background-size: 10px auto;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+.sec p, p {
+    color: #666;
+    line-height: 2.0;
+}
+.sec ul, ul {
+    color: #666;
+    padding-left: 0;
+    list-style: none;
+}
+.sec li, li {
+    line-height: 1.8;
+}
+.sort {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.8;
+    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
+}

@@ -1,0 +1,175 @@
+PODS:
+  - AFNetworking (2.5.4):
+    - AFNetworking/NSURLConnection (= 2.5.4)
+    - AFNetworking/NSURLSession (= 2.5.4)
+    - AFNetworking/Reachability (= 2.5.4)
+    - AFNetworking/Security (= 2.5.4)
+    - AFNetworking/Serialization (= 2.5.4)
+    - AFNetworking/UIKit (= 2.5.4)
+  - AFNetworking/NSURLConnection (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.5.4)
+  - AFNetworking/Security (2.5.4)
+  - AFNetworking/Serialization (2.5.4)
+  - AFNetworking/UIKit (2.5.4):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - AlipaySDK-2.0 (15.0.2):
+    - AlipaySDK-2.0/Core (= 15.0.2)
+  - AlipaySDK-2.0/Core (15.0.2)
+  - DXPopover (0.1.1)
+  - DZNEmptyDataSet (1.8.1)
+  - ELCImagePickerController (0.2.0)
+  - FDFullscreenPopGesture (1.1)
+  - FLEX (2.1.1)
+  - FontIcon (1.0)
+  - FXBlurView (1.6.4)
+  - HYBLoopScrollView (3.0.0)
+  - HyphenateSDK (3.1.5)
+  - IQKeyboardManager (3.3.7)
+  - iRate (1.11.6)
+  - JPush (2.2.0)
+  - LBXScan (1.1.1):
+    - ZXingObjC (~> 3.0)
+  - libWeChatSDK (1.7.1)
+  - Masonry (1.0.1)
+  - MJRefresh (3.1.12)
+  - NJKWebViewProgress (0.2.3):
+    - NJKWebViewProgress/Core (= 0.2.3)
+    - NJKWebViewProgress/ProgressView (= 0.2.3)
+  - NJKWebViewProgress/Core (0.2.3)
+  - NJKWebViewProgress/ProgressView (0.2.3)
+  - NullSafe (1.2.2)
+  - Reachability (3.0.0)
+  - REFormattedNumberField (1.1.6)
+  - RETableViewManager (1.7):
+    - REFormattedNumberField (~> 1.1.5)
+    - REValidation (~> 0.1.4)
+  - REValidation (0.1.4)
+  - SDAutoLayout (1.53)
+  - SDWebImage (3.7.6):
+    - SDWebImage/Core (= 3.7.6)
+  - SDWebImage/Core (3.7.6)
+  - SFHFKeychainUtils (0.0.1)
+  - SVWebViewController (1.0)
+  - TencentOpenApiSDK (2.9.5):
+    - TencentOpenApiSDK/Basic (= 2.9.5)
+  - TencentOpenApiSDK/Basic (2.9.5)
+  - TZImagePickerController (1.6.2)
+  - UIScrollView+PullBig (1.0.1)
+  - UMengAnalytics-NO-IDFA (4.1.1)
+  - WeiboSDK (3.1.4)
+  - WZLBadge (1.2.5)
+  - XHImageViewer (0.1.2)
+  - YYModel (1.0.4)
+  - ZXingObjC (3.1.0):
+    - ZXingObjC/All (= 3.1.0)
+  - ZXingObjC/All (3.1.0)
+  - ZYCornerRadius (0.8.1)
+
+DEPENDENCIES:
+  - AFNetworking (~> 2.5.4)
+  - AlipaySDK-2.0
+  - DXPopover
+  - DZNEmptyDataSet
+  - ELCImagePickerController (~> 0.2.0)
+  - FDFullscreenPopGesture (= 1.1)
+  - FLEX (~> 2.0)
+  - FontIcon (~> 1.0)
+  - FXBlurView (~> 1.6.4)
+  - HYBLoopScrollView (~> 3.0.0)
+  - HyphenateSDK (from `https://github.com/easemob/hyphenate-cocoapods.git`)
+  - IQKeyboardManager (~> 3.3.6)
+  - iRate (~> 1.11.3)
+  - JPush (~> 2.2.0)
+  - LBXScan (~> 1.1.1)
+  - libWeChatSDK (~> 1.5)
+  - Masonry
+  - MJRefresh (~> 3.1.0)
+  - NJKWebViewProgress
+  - NullSafe (~> 1.2.2)
+  - Reachability (~> 3.0.0)
+  - RETableViewManager
+  - SDAutoLayout (~> 1.52)
+  - SDWebImage (~> 3.7.2)
+  - SFHFKeychainUtils (~> 0.0.1)
+  - SVWebViewController (~> 1.0)
+  - TencentOpenApiSDK
+  - TZImagePickerController
+  - UIScrollView+PullBig
+  - UMengAnalytics-NO-IDFA
+  - WeiboSDK (from `https://github.com/sinaweibosdk/weibo_ios_sdk`)
+  - WZLBadge (~> 1.2.1)
+  - XHImageViewer (~> 0.1.2)
+  - YYModel
+  - ZYCornerRadius (from `https://github.com/liuzhiyi1992/ZYCornerRadius.git`, tag `0.9.1`)
+
+EXTERNAL SOURCES:
+  HyphenateSDK:
+    :git: https://github.com/easemob/hyphenate-cocoapods.git
+  WeiboSDK:
+    :git: https://github.com/sinaweibosdk/weibo_ios_sdk
+  ZYCornerRadius:
+    :git: https://github.com/liuzhiyi1992/ZYCornerRadius.git
+    :tag: 0.9.1
+
+CHECKOUT OPTIONS:
+  HyphenateSDK:
+    :commit: cfd43ac5e854f97779a041e5a7d1d6745b97d4fc
+    :git: https://github.com/easemob/hyphenate-cocoapods.git
+  WeiboSDK:
+    :commit: 6031a8da4ce17867ff5887b8dfc59ea45930274e
+    :git: https://github.com/sinaweibosdk/weibo_ios_sdk
+  ZYCornerRadius:
+    :git: https://github.com/liuzhiyi1992/ZYCornerRadius.git
+    :tag: 0.9.1
+
+SPEC CHECKSUMS:
+  AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
+  AlipaySDK-2.0: 346e006fd2999d5ca5dd8869d03bc0a260fc48e0
+  DXPopover: 13e6bbd1a0da4e62b2190de51f43a94850769e0f
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  ELCImagePickerController: b1b7084434a7d49f2cfc916bde1f3ba353d38de9
+  FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
+  FLEX: 27b768fcae23a313a1eb115076d429180ca9b472
+  FontIcon: 24a07541244227b865e689217efd7d049ba7cc43
+  FXBlurView: db786c2561cb49a09ae98407f52460096ab8a44f
+  HYBLoopScrollView: ad1dc5709e05ce77e0b1eb4b4fdd0fe55fc8cab2
+  HyphenateSDK: 382aa930ce5af6ea69aa52e6a122b111abb03aac
+  IQKeyboardManager: 249c3946acf61345c18b038eb50863fe2793e3a8
+  iRate: 61e558919c4a7fde63b3c22ebbd6c114a1eee658
+  JPush: 14bd5ff248fbef9c2179c82a9d1120e573b1c66a
+  LBXScan: dfb4d8ae8e4cff2aa0c9e1771e43954dce1469a9
+  libWeChatSDK: 3aa6a7da6469472e27840274461aa4ef5bcad045
+  Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  NJKWebViewProgress: f481fd424cb5ecc27eacae11b5397db92fba9a4d
+  NullSafe: cbf1f77a24558e49bc76e2673f31250d3087c792
+  Reachability: 31e4272bd8378e094beaf6609dc182c85c4e6574
+  REFormattedNumberField: 70fc5fb1218ebd5ee9983820defd12806d5c6ec6
+  RETableViewManager: 0f24d796c42c0890d38c79cc9aeb3871e186726e
+  REValidation: 38c4de1be58455f8b00aab208ac80db316a66b7f
+  SDAutoLayout: ea6e2ae9fbb438aa2feb0c4363dba9297e98638a
+  SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
+  SFHFKeychainUtils: 9576b411a79a058f4d5381ace6f3242b9a62e664
+  SVWebViewController: c36dda7326e81fcae0abf5d02bf7bbf7e41be901
+  TencentOpenApiSDK: a0d7716edd6eb438d65828168e8e5137301b436d
+  TZImagePickerController: 3f73cf921659d89a7b6f444dba7283d0f49bbc89
+  UIScrollView+PullBig: 60f3107f44cb958c9c4071bfb67e27a1f85a0350
+  UMengAnalytics-NO-IDFA: 1064992c1b7aaa22823179c0b33a664813fd7a85
+  WeiboSDK: bceab625ec59b7039ba721cc4ba9f5868804f63e
+  WZLBadge: 16c08aa0a645e2591690f21cbcb410a3d878c7ac
+  XHImageViewer: 7b275d2aa829e56761c30303b9d51cae086a90b9
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+  ZXingObjC: bf15b3814f7a105b6d99f47da2333c93a063650a
+  ZYCornerRadius: 485a8e9304d16d1620641054a08b9c0f55dd512c
+
+PODFILE CHECKSUM: 0f3f17f1bf4b2b86060f5e1438a5d44f5e3c8240
+
+COCOAPODS: 1.1.0.beta.1

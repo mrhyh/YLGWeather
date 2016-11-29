@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "04759db4-9af8-43ff-a320-3e1e11e12db7++8046",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "04759db4-9af8-43ff-a320-3e1e11e12db7++8046" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "04759db4-9af8-43ff-a320-3e1e11e12db7++8046" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "23852ECA-C349-4487-9967-843993437943",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "04759db4-9af8-43ff-a320-3e1e11e12db7++8046" : "EasyFrame_iOS2.0\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "EasyFrame_iOS2.0",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "EasyFrame_iOS2.0.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/192.168.0.122\/svn\/kingyonsvn",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "04759db4-9af8-43ff-a320-3e1e11e12db7++8046"
+    }
+  ]
+}

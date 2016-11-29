@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>naviPages</key>
+	<array>
+		<string>RSEPExchangePlatformVC</string>
+		<string>RSVisitArchiveVC</string>
+		<string>RSSRRightVC</string>
+	</array>
+	<key>imageArray</key>
+	<array>
+		<string>jiaoliu</string>
+		<string>dangan</string>
+		<string>tongji</string>
+	</array>
+	<key>titleArray</key>
+	<array>
+		<string>交流平台</string>
+		<string>随访档案</string>
+		<string>统计报表</string>
+	</array>
+</dict>
+</plist>
